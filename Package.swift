@@ -19,6 +19,11 @@ let package = Package(
     .package(url: "https://github.com/stackotter/swift-cmark-gfm", from: "1.0.2")
   ],
     targets: [
+    .target(
+      name: "Down",
+      dependencies: [
+        .product(name: "CMarkGFM", package: "swift-cmark-gfm")
+      ])
     ],
     swiftLanguageVersions: [.v5]
 )
